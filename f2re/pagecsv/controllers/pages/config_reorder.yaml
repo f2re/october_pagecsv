@@ -1,0 +1,4 @@
+title: Pages
+modelClass: F2re\Pagecsv\Models\Pages
+toolbar:
+    buttons: reorder_toolbar

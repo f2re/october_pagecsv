@@ -1,0 +1,56 @@
+columns:
+    id:
+        label: id
+        type: number
+        sortable: true
+    slug:
+        label: slug
+        type: text
+        searchable: true
+        sortable: true
+    title:
+        label: title
+        type: text
+        searchable: true
+        sortable: true
+    metadescr:
+        label: metadescr
+        type: text
+        searchable: true
+        sortable: true
+    h1:
+        label: h1
+        type: text
+        searchable: true
+        sortable: true
+    content:
+        label: content
+        type: text
+        searchable: true
+        sortable: true
+    category:
+        label: category
+        type: text
+        searchable: true
+        sortable: true
+    option:
+        label: option
+        type: text
+        sortable: true
+    customcontent:
+        label: customcontent
+        type: text
+        searchable: true
+        sortable: true
+    created_at:
+        label: created_at
+        type: datetime
+        sortable: true
+    updated_at:
+        label: updated_at
+        type: datetime
+        sortable: true
+    deleted_at:
+        label: deleted_at
+        type: datetime
+        sortable: true

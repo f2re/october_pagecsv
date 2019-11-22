@@ -1,0 +1,36 @@
+fields:
+    slug:
+        label: URL
+        span: auto
+        type: text
+    title:
+        label: 'Title page'
+        span: auto
+        type: text
+    h1:
+        label: 'Page H1 header'
+        span: auto
+        type: text
+    metadescr:
+        label: 'Meta description on page'
+        span: auto
+        type: text
+    content:
+        label: 'Page content'
+        size: giant
+        span: full
+        type: textarea
+    category:
+        label: Category
+        span: auto
+        type: text
+    option:
+        label: Option
+        span: auto
+        type: text
+        comment: 'Edit, delete, update'
+    customcontent:
+        label: 'Custom content'
+        span: full
+        size: large
+        type: textarea

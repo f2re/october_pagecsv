@@ -1,0 +1,11 @@
+plugin:
+    name: 'f2re.pagecsv::lang.plugin.name'
+    description: 'f2re.pagecsv::lang.plugin.description'
+    author: F2re
+    icon: oc-icon-pagelines
+    homepage: ''
+navigation:
+    main-menu-pages:
+        label: 'f2re.pagecsv::lang.plugin.name'
+        url: f2re/pagecsv/pages
+        icon: icon-pagelines

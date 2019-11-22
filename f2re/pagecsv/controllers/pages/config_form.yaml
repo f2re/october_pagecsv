@@ -1,0 +1,10 @@
+name: Pages
+form: $/f2re/pagecsv/models/pages/fields.yaml
+modelClass: F2re\Pagecsv\Models\Pages
+defaultRedirect: f2re/pagecsv/pages
+create:
+    redirect: 'f2re/pagecsv/pages/update/:id'
+    redirectClose: f2re/pagecsv/pages
+update:
+    redirect: f2re/pagecsv/pages
+    redirectClose: f2re/pagecsv/pages

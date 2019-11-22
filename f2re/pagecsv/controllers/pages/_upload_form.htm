@@ -1,0 +1,39 @@
+<?= Form::open(['id' => 'uploadForm', 'files' => true, 'data-request-files'=>true,'data-request-flash'=>true, 'data-request' => "onUpload"]) ?>
+<input type="hidden" name="upload_mode" value="1" />
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="popup">&times;</button>
+    <h4 class="modal-title">Uploading csv file</h4>
+</div>
+<div class="modal-body">
+       
+
+    <!-- Upload Button -->
+    
+    	<label class="btn btn-default upload-button dz-clickable">
+		    <i class="icon-upload"></i> <input type="file" accept="text/csv" name="uploadcsv" hidden>
+		    
+		</label>
+    	
+
+
+</div>
+
+</div>
+
+<style>
+[hidden] {
+  //display: none !important;
+}
+</style>
+
+<div class="modal-footer">
+        <button
+            type="submit"
+            data-request-data="redirect:1"
+            data-hotkey="ctrl+s, cmd+s"
+            data-popup-load-indicator
+            class="btn btn-primary">
+            Upload File
+        </button>
+</div>
+<?= Form::close() ?>

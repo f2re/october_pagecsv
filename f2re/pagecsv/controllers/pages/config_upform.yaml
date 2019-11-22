@@ -1,0 +1,7 @@
+fields:
+input_file:
+    label: Upload CSV file
+    type: fileupload
+    mode: file
+    fileTypes: ['txt', 'csv']
+    span: auto

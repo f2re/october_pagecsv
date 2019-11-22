@@ -1,0 +1,12 @@
+title: Pages
+modelClass: F2re\Pagecsv\Models\Pages
+list: $/f2re/pagecsv/models/pages/columns.yaml
+recordUrl: 'f2re/pagecsv/pages/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
