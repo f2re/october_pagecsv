@@ -9,9 +9,9 @@ class Pages extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     
-    use \October\Rain\Database\Traits\SoftDelete;
+    //use \October\Rain\Database\Traits\SoftDelete;
 
-    protected $dates = ['deleted_at'];
+    //protected $dates = ['deleted_at'];
 
 
     /**
@@ -25,8 +25,4 @@ class Pages extends Model
     public $rules = [
     ];
     
-    public $attachOne = [
-        // 'uploadcsv' => 'System\Models\File'
-        'uploadcsv' => 'F2re\Pagecsv\Models\CSVLoader'
-    ];
 }

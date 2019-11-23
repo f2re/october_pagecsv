@@ -50,7 +50,3 @@ columns:
         label: updated_at
         type: datetime
         sortable: true
-    deleted_at:
-        label: deleted_at
-        type: datetime
-        sortable: true
