@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+   {% for p in pages %}
+    <url>
+      <loc>{{ url('/') ~ '/' ~ p.slug }}</loc>
+      <lastmod>{{ p.updated_at|date('c') }}</lastmod>
+      <changefreq> always </changefreq>
+      <priority>0.7</priority>
+    </url>
+  {% endfor %}
+</urlset>

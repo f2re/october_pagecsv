@@ -1,0 +1,17 @@
+{% if searchresult %}
+    <span class="lead">
+    	{% if searchresult is empty %}
+    		No matching found...try another query.
+    	{% else %}
+    		<ul class="list-unstyled">
+	    		{% for res in searchresult %}
+	    			<li class="mb-2"> <a href="/{{res.slug}}">{{res.title}}</a> </li>
+	    		{% endfor %}
+	    	</ul>
+    	{% endif %}
+    </span>
+{% else %}
+    <span class="text-muted">
+        Enter search query and click the <em>Search</em> button to find the pages.
+    </span>
+{% endif %}
