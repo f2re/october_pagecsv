@@ -9,3 +9,5 @@
 1.0.4:
     - 'Updated table f2re_pagecsv_pages'
     - builder_table_update_f2re_pagecsv_pages_2.php
+1.0.5:
+    - 'Add sitemap and search component'
