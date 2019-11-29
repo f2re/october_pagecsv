@@ -55,6 +55,18 @@ class SearchPage extends ComponentBase
 	    ];
     }
     
+    /**
+     * Request while typing search
+     **/
+    public function onType()
+    {
+    	$this->page['searchresult'] = $this->search();
+    	
+    	return [
+	        '#request' => $this->renderPartial('@_list.htm'),
+	    ];
+    }
+    
     /*
      * Данная функция вызывается по клику на кнопку "Загрузить ещё"
      */

@@ -33,7 +33,7 @@ class CSVProcess
         			// increment deleted files
         			$result['deleted']+=1;
         		}else
-        		if ( $item[6]=='update' ){
+        		if ( $item[6]=='update' || $item[6]=='edit' ){
         			$pagemodel->title = $item[0];
 	        		$pagemodel->metadescr = $item[1];
 	        		$pagemodel->h1 = $item[2];

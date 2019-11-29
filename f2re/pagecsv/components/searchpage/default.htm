@@ -1,6 +1,9 @@
 <div class="panel-body">
     <form class="form-inline" data-request="{{ __SELF__ }}::onSearch" data-request-update="'{{ __SELF__ }}::_list': '#result'">
-        <input type="text" class="form-control"  value="" placeholder="search text" name="queryCsv" style="width:500px">
+        <input	type="text" class="form-control"  
+        		data-track-input="true" autocomplete="off" data-request="{{ __SELF__ }}::onSearch"
+        		data-request-update="'{{ __SELF__ }}::_list': '#result'"
+        		value="" placeholder="search text" name="queryCsv" style="width:500px">
         <button type="submit" class="btn btn btn-primary" data-attach-loading>Search</button>
     </form>
 </div>
