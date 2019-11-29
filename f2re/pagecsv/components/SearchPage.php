@@ -17,7 +17,16 @@ class SearchPage extends ComponentBase
 
     public function defineProperties()
     {
-        return [];
+        return [
+        	'pagination' => [
+	             'title'             => 'Per page',
+	             'description'       => 'items per page',
+	             'default'           => 10,
+	             'type'              => 'string',
+	             'validationPattern' => '^[0-9]+$',
+	             'validationMessage' => 'The Max Items property can contain only numeric symbols'
+	        ]
+        ];
     }
     
     public function search(){
@@ -25,7 +34,7 @@ class SearchPage extends ComponentBase
     	
     	$data = Pages::where('title', 'like', "%{$query}%")->queryPaginate([
             'page'    => $this->property('pageNumber'),
-            'perPage' => 10,
+            'perPage' => $this->property('pagination');,
         ]);
         return $data;
     }
