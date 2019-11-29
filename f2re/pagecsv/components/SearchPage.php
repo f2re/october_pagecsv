@@ -32,7 +32,8 @@ class SearchPage extends ComponentBase
     public function search(){
     	$query = input('queryCsv');
     	
-    	$data = Pages::where('title', 'like', "%{$query}%")->queryPaginate([
+    	// $data = Pages::where('title', 'like', "%{$query}%")->queryPaginate([
+    	$data = Pages::search($query)->queryPaginate([
             'page'    => $this->property('pageNumber'),
             'perPage' => $this->property('pagination'),
         ]);

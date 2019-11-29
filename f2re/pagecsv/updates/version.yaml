@@ -15,3 +15,7 @@
 1.1.4: fix
 1.1.5: fix
 1.1.6: bitton fix
+1.1.8: add fulltext migrate
+1.1.9:
+    - 'Updated table f2re_pagecsv_pages'
+    - builder_table_update_f2re_pagecsv_pages_3.php
