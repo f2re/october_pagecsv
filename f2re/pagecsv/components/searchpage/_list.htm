@@ -5,7 +5,10 @@
     	{% else %}
     		<ul class="list-unstyled">
 	    		{% for res in searchresult %}
-	    			<li class="mb-2"> <a href="/{{res.slug}}">{{res.title}}</a> </li>
+	    			<li class="mb-2"> 
+	    				<a href="/{{res.slug}}">{{res.title}}</a><br /> 
+	    				<small><span class="muted ">{{res.h1}}</span></small>
+	    			</li>
 	    		{% endfor %}
 	    	</ul>
     	{% endif %}

@@ -1,9 +1,14 @@
 <div class="panel-body">
-    <form class="form-inline" data-request="{{ __SELF__ }}::onSearch" data-request-update="'{{ __SELF__ }}::searchresult': '#result'">
+    <form class="form-inline" data-request="{{ __SELF__ }}::onSearch" data-request-update="'{{ __SELF__ }}::_list': '#result'">
         <input type="text" class="form-control"  value="" placeholder="search text" name="queryCsv" style="width:500px">
         <button type="submit" class="btn btn btn-primary" data-attach-loading>Search</button>
     </form>
 </div>
+
 <div class="panel-footer" id="result">
-    
+    {% partial '@_list' %}
+</div>
+
+<div id="load-more-button" class="loadmore">
+	
 </div>

@@ -25,4 +25,18 @@ class Pages extends Model
     public $rules = [
     ];
     
+    /**
+     *  Scope for pagination
+     * 
+     **/
+    public function scopeQueryPaginate($query, $options = []) 
+    {
+        extract(array_merge([
+            'page'    => 1,
+            'perPage' => 20,
+        ], $options));
+
+        return $query->paginate($perPage, $page);
+    }
+    
 }
