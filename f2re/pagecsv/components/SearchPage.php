@@ -65,6 +65,7 @@ class SearchPage extends ComponentBase
     	
     	return [
 	        '#request' => $this->renderPartial('@_list.htm'),
+	        '#load-more-button' => $more_link,
 	    ];
     }
     

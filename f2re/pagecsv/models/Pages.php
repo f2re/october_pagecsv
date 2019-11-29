@@ -55,9 +55,9 @@ class Pages extends Model
      */
     public function scopeSearch($query, $term)
     {
-        $columns = implode(',',$this->searchable);
- 
-        $query->whereRaw("MATCH ({$columns}) AGAINST (? IN BOOLEAN MODE)" , $this->fullTextWildcards($term));
+        // $columns = implode(',',$this->searchable);
+		$query->where('title', 'like', "%{$term}%");
+        // $query->whereRaw("MATCH ({$columns}) AGAINST (? IN BOOLEAN MODE)" , $this->fullTextWildcards($term));
  
         return $query;
     }
@@ -81,7 +81,7 @@ class Pages extends Model
              * applying + operator (required word) only big words
              * because smaller ones are not indexed by mysql
              */
-            if(strlen($word) >= 3) {
+            if(strlen($word) >= 2) {
                 $words[$key] = '+' . $word . '*';
             }
         }
