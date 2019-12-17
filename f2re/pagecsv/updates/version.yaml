@@ -20,10 +20,8 @@
     - 'Updated table f2re_pagecsv_pages'
     - builder_table_update_f2re_pagecsv_pages_3.php
 1.1.10: 'remove fulltext'
-1.1.11:
-    - 'Updated table f2re_pagecsv_pages'
-    - builder_table_update_f2re_pagecsv_pages_3.php
 1.1.12:
     - 'Updated table f2re_pagecsv_pages'
     - builder_table_update_f2re_pagecsv_pages_4.php
 1.1.13: 'Add GeoSpartial search'
+1.1.14: 'fix search'
