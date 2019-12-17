@@ -63,11 +63,12 @@ class Pages extends Model
         return $query;
     }
 
+
     /**
      * Search geo spartial records by _id record and _r radius
      *
      */
-    public function scopeSearchGeo($query, $_id, $_r, $_limit)
+    public function scopeSearchGeo($query, $_id, $_r, $_limit, $_cat)
     {
       $circle_radius = 3959;
       if ( $_id>0 ){
@@ -83,7 +84,7 @@ class Pages extends Model
                         sin(radians(' . $lat . ')) * sin(radians(lat))))
                         AS distance
                         FROM '.$this->table.'
-                        WHERE id<>'.$_id.' ) AS distances
+                        WHERE id<>'.$_id.' '.($_cat!=''?' AND category="'.$_cat.'" ':'').' ) AS distances
                     WHERE distance < ' . $_r . ' 
                     ORDER BY distance
                     LIMIT '.($_limit>0?$_limit:0).'; ');

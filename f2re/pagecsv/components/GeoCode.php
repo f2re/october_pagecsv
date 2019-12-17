@@ -34,14 +34,20 @@ class GeoCode extends ComponentBase
                'validationPattern' => '^[0-9]+$',
                'validationMessage' => 'The Limit property can contain only numeric symbols',
           ],
+          'category' => [
+               'title'             => 'Category search',
+               'description'       => 'Category search',
+               'default'           => 'hotel',
+               'type'              => 'string',
+          ],
         ];
     }
     
     public function search(){
-    	$_r  = (int)$this->property('radius');
-    	$_id = (int)$this->property('id');
-    	// $data = Pages::where('title', 'like', "%{$query}%")->queryPaginate([
-    	$data = Pages::searchGeo( $_id, $_r, $this->property('limit'));
+    	$_r   = (int)$this->property('radius');
+    	$_id  = (int)$this->property('id');
+      $_cat = $this->property('category');
+    	$data = Pages::searchGeo( $_id, $_r, $this->property('limit'), $_cat);
       return $data;
     }
 
