@@ -69,7 +69,7 @@ class CSVProcess
         return $result;
     }
     
-    public static function csv_to_array($filename='', $delimiter=',')
+  public static function csv_to_array($filename='', $delimiter=',')
 	{
 		ini_set("auto_detect_line_endings", true);
 	    if(!file_exists($filename) || !is_readable($filename))

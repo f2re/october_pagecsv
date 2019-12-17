@@ -8,6 +8,7 @@ class Plugin extends PluginBase
     {
     	return [
 	        'F2re\Pagecsv\Components\SearchPage'  => 'SearchPageCSV',
+          'F2re\Pagecsv\Components\GeoCode'  => 'GeoCodeCSV',
 	    ];
     }
 

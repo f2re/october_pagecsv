@@ -34,3 +34,11 @@ fields:
         span: full
         size: large
         type: textarea
+    lat:
+        label: Latitude
+        span: auto
+        type: number
+    lon:
+        label: Longitude
+        span: auto
+        type: number

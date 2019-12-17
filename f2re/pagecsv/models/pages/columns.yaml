@@ -50,3 +50,11 @@ columns:
         label: updated_at
         type: datetime
         sortable: true
+    lat:
+        label: lat
+        type: number
+        sortable: true
+    lon:
+        label: lon
+        type: number
+        sortable: true
