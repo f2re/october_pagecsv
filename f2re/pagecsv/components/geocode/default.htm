@@ -5,11 +5,11 @@
       {% if geocoderesult is empty %}
         No around found...maybe another object?
       {% else %}
-        <ul class="list-unstyled">
+        <ul class="list-unstyled geo-ul">
           {% for res in geocoderesult %}
-            <li class="mb-2"> 
-              <a href="/{{res.slug}}">{{res.title}}</a><br /> 
-              <small><span class="muted ">{{res.h1}}</span></small>
+            <li class="mb-2 geo-li"> 
+              <a href="/{{res.slug}}" class="geo-link">{{res.title}}</a><br /> 
+              <small class="geo-small">{{res.h1}}</small>
             </li>
           {% endfor %}
         </ul>
