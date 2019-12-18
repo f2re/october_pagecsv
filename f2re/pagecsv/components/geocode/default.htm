@@ -8,8 +8,7 @@
         <ul class="list-unstyled geo-ul">
           {% for res in geocoderesult %}
             <li class="mb-2 geo-li"> 
-              <a href="/{{res.slug}}" class="geo-link">{{res.title}}</a><br /> 
-              <small class="geo-small">{{res.h1}}</small>
+              <a href="/{{res.slug}}" class="geo-link">{{res.h1}}</a>
             </li>
           {% endfor %}
         </ul>
