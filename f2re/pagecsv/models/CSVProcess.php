@@ -19,12 +19,12 @@ class CSVProcess
         $result = ['deleted'=>0, 'updated'=>0,'added'=>0];
         
         foreach ( $data_to_db as $item ){
-        	if ( !is_array($item) || count($item)<7 || $item[7]=='' ){
+        	if ( !is_array($item) || count($item)<7 || $item[0]=='' ){
         		continue;
         	}
         	// sluggable string
-        	$item[7] = str_slug($item[7], "-");
-        	$pagemodel = Pages::where('slug',$item[7])->first();
+        	$item[0] = str_slug($item[0], "-");
+        	$pagemodel = Pages::where('slug',$item[0])->first();
         	
         	// if page exist - try to update or delete
         	if ( $pagemodel ){
@@ -34,13 +34,15 @@ class CSVProcess
         			$result['deleted']+=1;
         		}else
         		if ( $item[6]=='update' || $item[6]=='edit' ){
-        			$pagemodel->title = $item[0];
-	        		$pagemodel->metadescr = $item[1];
-	        		$pagemodel->h1 = $item[2];
-	        		$pagemodel->content = $item[3];
-	        		$pagemodel->category = $item[4];
-	        		$pagemodel->customcontent = $item[5];
+        			$pagemodel->title = $item[1];
+	        		$pagemodel->metadescr = $item[2];
+	        		$pagemodel->h1 = $item[3];
+	        		$pagemodel->content = $item[4];
+	        		$pagemodel->category = $item[5];
+	        		$pagemodel->customcontent = $item[7];
 	        		$pagemodel->option = $item[6];
+              $pagemodel->lat = $item[8];
+              $pagemodel->lon = $item[9];
 	        		$pagemodel->save();
 	        		// incremenet updated files
 	        		$result['updated']+=1;
@@ -49,14 +51,16 @@ class CSVProcess
         	// else create new page
         	else{
         		$pagemodel = new Pages;
-        		$pagemodel->slug = $item[7];
-        		$pagemodel->title = $item[0];
-        		$pagemodel->metadescr = $item[1];
-        		$pagemodel->h1 = $item[2];
-        		$pagemodel->content = $item[3];
-        		$pagemodel->category = $item[4];
-        		$pagemodel->customcontent = $item[5];
+        		$pagemodel->slug = $item[0];
+        		$pagemodel->title = $item[1];
+        		$pagemodel->metadescr = $item[2];
+        		$pagemodel->h1 = $item[3];
+        		$pagemodel->content = $item[4];
+        		$pagemodel->category = $item[5];
+        		$pagemodel->customcontent = $item[7];
         		$pagemodel->option = $item[6];
+            $pagemodel->lat = $item[8];
+            $pagemodel->lon = $item[9];
         		
         		if ( $pagemodel->option!='delete' ){
         			$pagemodel->save();
